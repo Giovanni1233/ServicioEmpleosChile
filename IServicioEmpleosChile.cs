@@ -12,17 +12,22 @@ namespace ServicioEmpleosChile
     public interface IServicioEmpleosChile
     {
         [OperationContract]
-        ServicioEmpleosChile GetUsuario(string[] Parametros, string[] valores);
-          
-        /// Validacion de cliente login
-        [OperationContract]
-        ServicioEmpleosChile ValUsuario(string[] Parametros, string[] valores);
+        ServicioEmpleosChile GetCandidatosEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
-        ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] valores);
+        ServicioEmpleosChile GetCiudad(string[] Parametros, string[] valores);
 
         [OperationContract]
-        ServicioEmpleosChile SetEmpresa(string[] Parametros, string[] valores);
+        ServicioEmpleosChile GetComuna(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile GetDetallePublicacion(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile GetPais();
+
+        [OperationContract]
+        ServicioEmpleosChile GetRegion();
 
         [OperationContract]
         ServicioEmpleosChile GetPlanesEmpresa(string[] Parametros, string[] valores);
@@ -31,12 +36,21 @@ namespace ServicioEmpleosChile
         ServicioEmpleosChile GetPublicacionesEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
-        ServicioEmpleosChile SetPublicacionesEmpresa(string[] Parametros, string[] valores);
-        [OperationContract]
-        ServicioEmpleosChile GetCandidatosEmpresa(string[] Parametros, string[] valores);
+        ServicioEmpleosChile GetUsuario(string[] Parametros, string[] valores);
+
 
         [OperationContract]
-        ServicioEmpleosChile GetDetallePublicacion(string[] Parametros, string[] valores);
+        ServicioEmpleosChile SetEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile SetPublicacionesEmpresa(string[] Parametros, string[] valores);
+
+
+        [OperationContract]
+        ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile ValUsuario(string[] Parametros, string[] valores);
     }
 
     [DataContract()]

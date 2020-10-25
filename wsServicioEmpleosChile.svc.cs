@@ -22,48 +22,62 @@ namespace ServicioEmpleosChile
             return Lista;
         }
 
-        public ServicioEmpleosChile GetUsuario(string[] Parametros, string[] Valores)
+
+        public ServicioEmpleosChile GetCandidatosEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.GetUsuario(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.GetCandidatosEmpresa(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 
             return IService;
         }
 
-        public ServicioEmpleosChile ValUsuario(string[] Parametros, string[] Valores)
+        public ServicioEmpleosChile GetCiudad(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.ValUsuario(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.GetCiudad(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 
             return IService;
         }
 
-        public ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] Valores)
+        public ServicioEmpleosChile GetComuna(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.ValEmpresa(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.GetComuna(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 
             return IService;
         }
-        public ServicioEmpleosChile SetEmpresa(string[] Parametros, string[] Valores)
+
+        public ServicioEmpleosChile GetDetallePublicacion(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.SetEmpresa(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.GetDetallePublicacion(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetPais()
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetPais());
             IService.Table = ds;
 
             return IService;
@@ -93,13 +107,38 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-        public ServicioEmpleosChile GetCandidatosEmpresa(string[] Parametros, string[] Valores)
+        public ServicioEmpleosChile GetRegion()
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.GetCandidatosEmpresa(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.GetRegion());
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetUsuario(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+
+        public ServicioEmpleosChile SetEmpresa(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.SetEmpresa(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 
             return IService;
@@ -117,18 +156,29 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-        public ServicioEmpleosChile GetDetallePublicacion(string[] Parametros, string[] Valores)
+
+        public ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
-            ds.Tables.Add(EChile.GetDetallePublicacion(ArrayToListParametros(Parametros, Valores)));
+            ds.Tables.Add(EChile.ValEmpresa(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 
             return IService;
         }
 
+        public ServicioEmpleosChile ValUsuario(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
 
+            ds.Tables.Add(EChile.ValUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
     }
 }
