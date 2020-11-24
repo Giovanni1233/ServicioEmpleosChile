@@ -412,6 +412,18 @@ namespace ServicioEmpleosChile
             ServicioEmpleosChile IService = new ServicioEmpleosChile();
             DataSet ds = new DataSet();
 
+        public ServicioEmpleosChile SetUsuario(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.SetUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
             ds.Tables.Add(EChile.SetUpdVotacionPublicacion(ArrayToListParametros(Parametros, Valores)));
             IService.Table = ds;
 

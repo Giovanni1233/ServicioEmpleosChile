@@ -333,6 +333,15 @@ namespace ServicioEmpleosChile
 
        
 
+        public DataTable SetUsuario(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_USUARIO", parametros);
+
+            return dt;
+        }
+
 
         public DataTable ValUsuario(List<Parametro> parametros)
         {

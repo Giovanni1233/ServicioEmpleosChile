@@ -120,6 +120,9 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile UpdPublicacionEmpresa(string[] Parametros, string[] valores);
+        [OperationContract]
+        ServicioEmpleosChile SetUsuario(string[] Parametros, string[] valores);
+
 
         [OperationContract]
         ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] valores);
