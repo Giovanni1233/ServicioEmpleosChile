@@ -52,6 +52,9 @@ namespace ServicioEmpleosChile
         ServicioEmpleosChile GetDetalleTrabajador(string[] Parametros, string[] valores);
 
         [OperationContract]
+        ServicioEmpleosChile GetDevolucionEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
         ServicioEmpleosChile GetEducacionUsuario(string[] Parametros, string[] valores);
 
         [OperationContract]
@@ -73,6 +76,9 @@ namespace ServicioEmpleosChile
         ServicioEmpleosChile GetImagenesBannerEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
+        ServicioEmpleosChile GetImagenPerfilEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
         ServicioEmpleosChile GetImagenUsuario(string[] Parametros, string[] valores);
 
         [OperationContract]
@@ -86,6 +92,9 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetPais();
+
+        [OperationContract]
+        ServicioEmpleosChile GetPagosEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
         ServicioEmpleosChile GetPlanesEmpresa(string[] Parametros, string[] valores);
@@ -104,6 +113,9 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetPreguntasPorPublicacionEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile GetPreguntasPorPublicacionId(string[] Parametros, string[] valores);
 
         [OperationContract]
         ServicioEmpleosChile GetPreguntasSeleccionadasEmpresa(string[] Parametros, string[] valores);
@@ -150,6 +162,9 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile SetPreguntasSeleccionadasEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile SetPreguntasSeleccionadasPublicacionEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
         ServicioEmpleosChile SetPreguntasEmpresaPostulacion(string[] Parametros, string[] valores);
