@@ -11,9 +11,12 @@ namespace ServicioEmpleosChile
     [ServiceContract]
     public interface IServicioEmpleosChile
     {
-
         [OperationContract]
         ServicioEmpleosChile DelImagenesEmpresa(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile DelCurriculum(string[] Parametros, string[] valores); 
+
 
         [OperationContract]
         ServicioEmpleosChile GetCandidatosPublicacionEmpresa(string[] Parametros, string[] valores);
@@ -29,6 +32,7 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetComentariosPublicacion(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile GetComuna(string[] Parametros, string[] valores);
 
@@ -42,6 +46,7 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetDetalleMensajeDelUsuario(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile GetDetallePlanes(string[] Parametros, string[] valores);
 
@@ -122,7 +127,6 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetRegion();
-
         
         [OperationContract]
         ServicioEmpleosChile GetSolicitudesEmpresa(string[] Parametros, string[] valores);
@@ -132,11 +136,13 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetTrabajadores(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile GetUltimosCandidatosEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
         ServicioEmpleosChile GetUltimoPlanEmpresa(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile GetUsuario(string[] Parametros, string[] valores);
         
@@ -145,6 +151,10 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile GetVotoSeleccionadoPublicacion(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile GetCurriculum(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile SetComentarioPublicacion(string[] Parametros, string[] valores);
 
@@ -185,6 +195,13 @@ namespace ServicioEmpleosChile
         ServicioEmpleosChile SetUpdVotacionPublicacion(string[] Parametros, string[] valores);
 
         [OperationContract]
+        ServicioEmpleosChile SetUsuario(string[] Parametros, string[] valores);
+
+        [OperationContract]
+        ServicioEmpleosChile SetCurriculum(string[] Parametros, string[] valores);
+
+
+        [OperationContract]
         ServicioEmpleosChile UpdADPreguntaEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
@@ -198,14 +215,12 @@ namespace ServicioEmpleosChile
 
         [OperationContract]
         ServicioEmpleosChile UpdPerfilUsuarioEmpresa(string[] Parametros, string[] valores);
+
         [OperationContract]
         ServicioEmpleosChile UpdPublicacionEmpresa(string[] Parametros, string[] valores);
 
         [OperationContract]
         ServicioEmpleosChile UpdTarjetaEmpresa(string[] Parametros, string[] valores); 
-
-        [OperationContract]
-        ServicioEmpleosChile SetUsuario(string[] Parametros, string[] valores);
 
 
         [OperationContract]

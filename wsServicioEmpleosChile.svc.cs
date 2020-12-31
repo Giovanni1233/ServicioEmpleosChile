@@ -22,6 +22,7 @@ namespace ServicioEmpleosChile
             return Lista;
         }
 
+
         public ServicioEmpleosChile DelImagenesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -33,6 +34,19 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
+        public ServicioEmpleosChile DelCurriculum(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.DelCurriculum(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
 
         public ServicioEmpleosChile GetCandidatosPublicacionEmpresa(string[] Parametros, string[] Valores)
         {
@@ -128,6 +142,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetDatosUsuario(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -139,6 +154,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetDetalleMensajeDelUsuario(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -150,6 +166,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetDetallePlanes(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -296,7 +313,6 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-
         public ServicioEmpleosChile GetImagenUsuario(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -309,7 +325,6 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-        
         public ServicioEmpleosChile GetMensajesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -357,6 +372,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetPagosEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -368,6 +384,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetPlanesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -463,6 +480,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetRegion()
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -474,6 +492,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetSolicitudesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -497,6 +516,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetTrabajadores(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -508,6 +528,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetUltimosCandidatosEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -531,6 +552,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetUsuarioEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -542,6 +564,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetUsuario(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -553,6 +576,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile GetVotoSeleccionadoPublicacion(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -564,6 +588,20 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
+        public ServicioEmpleosChile GetCurriculum(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetCurriculum(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+
         public ServicioEmpleosChile SetComentarioPublicacion(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -575,6 +613,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -610,6 +649,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetPlanesContratadosEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -621,6 +661,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetPreguntasSeleccionadasEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -668,6 +709,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetPublicacionesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -691,6 +733,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetUsuarioEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -702,6 +745,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile SetUpdVotacionPublicacion(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -725,7 +769,19 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-        
+        public ServicioEmpleosChile SetCurriculum(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.SetCurriculum(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+
         public ServicioEmpleosChile UpdADPreguntaEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -737,6 +793,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile UpdADPublicacionEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -760,6 +817,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile UpdPerfilEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -783,6 +841,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile UpdPublicacionEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -806,6 +865,8 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
+
         public ServicioEmpleosChile ValEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -817,6 +878,7 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
         public ServicioEmpleosChile ValUsuario(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
