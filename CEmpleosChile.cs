@@ -16,6 +16,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable DelExperienciasUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -24,6 +25,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable DelHabilidadesUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -41,7 +43,6 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
-
         
         public DataTable DelImagenesEmpresa(List<Parametro> parametros)
         {
@@ -57,6 +58,15 @@ namespace ServicioEmpleosChile
             SQLServerDBHelper helper = new SQLServerDBHelper();
             DataTable dt = new DataTable();
             dt = helper.ExecuteStoreProcedure("SP_DEL_CURRICULUM", parametros);
+
+            return dt;
+        }
+
+        public DataTable DelTagOficioUsuario(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_DEL_TAGOFICIO_USUARIO", parametros);
 
             return dt;
         }
@@ -88,6 +98,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetCantidadesSNM(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -123,6 +134,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetContadorPostulacionUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -131,6 +143,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetContadorUsuarioEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -166,6 +179,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetDetalleMensajeDelUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -237,6 +251,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetExperienciaUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -263,6 +278,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetHabilidadesUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -379,6 +395,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetNotificacionesEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -432,6 +449,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetPlanesEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -503,6 +521,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable GetPublicacionesEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -682,6 +701,51 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+        public DataTable GetTagOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_TAGOFICIO", parametros);
+
+            return dt;
+        }
+
+        public DataTable GetTagOficioUsuario(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_TAGOFICIO_USUARIO", parametros);
+
+            return dt;
+        }
+        
+        public DataTable GetDescripcionOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_DESCRIPCION_OFICIO", parametros);
+
+            return dt;
+        }
+        
+        public DataTable GetValoracionOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_VALORACIONOFICIO", parametros);
+
+            return dt;
+        }
+        
+        public DataTable GetComentarioOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_COMENTARIOOFICIO", parametros);
+
+            return dt;
+        }
+
 
         public DataTable SetComentarioPublicacion(List<Parametro> parametros)
         {
@@ -691,6 +755,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable SetEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -708,6 +773,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable SetEducacionUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -734,6 +800,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable SetImagenesEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -751,6 +818,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable SetPagosEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -777,6 +845,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable SetPublicacionEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -894,6 +963,33 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+        public DataTable SetTagOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_TAGOFICIO", parametros);
+
+            return dt;
+        }
+
+        public DataTable SetTagOficioUsuario(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_TAGOFICIO_USUARIO", parametros);
+
+            return dt;
+        }
+
+        public DataTable SetDescripcionOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_DESCRIPCION_OFICIO", parametros);
+
+            return dt;
+        }
+
 
         public DataTable UpdADPreguntaEmpresa(List<Parametro> parametros)
         {
@@ -930,6 +1026,7 @@ namespace ServicioEmpleosChile
 
             return dt;
         }
+
         public DataTable UpdPerfilEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
