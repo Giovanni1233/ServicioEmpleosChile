@@ -426,6 +426,18 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
+        public ServicioEmpleosChile GetImagenesAfuera()
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetImagenesAfuera());
+            IService.Table = ds;
+
+            return IService;
+        }
+
         public ServicioEmpleosChile GetImagenesBannerEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -546,6 +558,18 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
+        public ServicioEmpleosChile GetOficiosUsuario(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetOficiosUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
         public ServicioEmpleosChile GetPais()
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -593,6 +617,18 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
+        public ServicioEmpleosChile GetPlanSeleccionadoEmpresa(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetPlanSeleccionadoEmpresa(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
         public ServicioEmpleosChile GetPreguntasEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -600,6 +636,18 @@ namespace ServicioEmpleosChile
             DataSet ds = new DataSet();
 
             ds.Tables.Add(EChile.GetPreguntasEmpresa(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetPreguntasTestUsuario()
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetPreguntasTestUsuario());
             IService.Table = ds;
 
             return IService;
@@ -688,7 +736,18 @@ namespace ServicioEmpleosChile
             return IService;
         }
 
-       
+        public ServicioEmpleosChile GetRespuestasPublicacion(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetRespuestasPublicacion(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
         public ServicioEmpleosChile GetRegion()
         {
             CEmpleosChile EChile = new CEmpleosChile();
@@ -696,6 +755,41 @@ namespace ServicioEmpleosChile
             DataSet ds = new DataSet();
 
             ds.Tables.Add(EChile.GetRegion());
+            IService.Table = ds;
+
+            return IService;
+        }
+        public ServicioEmpleosChile GetRespuestasTestUsuario(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetRespuestasTestUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetResultadosTest(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetResultadosTest(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetRubro()
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetRubro());
             IService.Table = ds;
 
             return IService;
@@ -791,6 +885,18 @@ namespace ServicioEmpleosChile
             DataSet ds = new DataSet();
 
             ds.Tables.Add(EChile.GetUsuario(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
+        public ServicioEmpleosChile GetUsuariosConOficios()
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.GetUsuariosConOficios());
             IService.Table = ds;
 
             return IService;
@@ -1021,6 +1127,19 @@ namespace ServicioEmpleosChile
 
             return IService;
         }
+
+        public ServicioEmpleosChile SetRespuestasUsuarioTest(string[] Parametros, string[] Valores)
+        {
+            CEmpleosChile EChile = new CEmpleosChile();
+            ServicioEmpleosChile IService = new ServicioEmpleosChile();
+            DataSet ds = new DataSet();
+
+            ds.Tables.Add(EChile.SetRespuestasUsuarioTest(ArrayToListParametros(Parametros, Valores)));
+            IService.Table = ds;
+
+            return IService;
+        }
+
         public ServicioEmpleosChile SetPublicacionesEmpresa(string[] Parametros, string[] Valores)
         {
             CEmpleosChile EChile = new CEmpleosChile();
