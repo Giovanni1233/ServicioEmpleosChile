@@ -396,6 +396,15 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+        public DataTable GetMensajesOficios(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_MENSAJES_OFICIOS", parametros);
+
+            return dt;
+        }
+
         public DataTable GetNotificacionesEmpresa(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
@@ -405,11 +414,29 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+        public DataTable GetOficios(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_OFICIOS", parametros);
+
+            return dt;
+        }
+
         public DataTable GetOficiosUsuario(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
             DataTable dt = new DataTable();
             dt = helper.ExecuteStoreProcedure("SP_GET_OFICIOS_USUARIO", parametros);
+
+            return dt;
+        }
+
+        public DataTable GetOficiosUsuarioFiltro(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_OFICIOS_USUARIO_FILTRO", parametros);
 
             return dt;
         }
@@ -675,11 +702,11 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
-        public DataTable GetUsuariosConOficios()
+        public DataTable GetUsuariosConOficios(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
             DataTable dt = new DataTable();
-            dt = helper.ExecuteStoreProcedure("SP_GET_USUARIO_CON_OFICIO");
+            dt = helper.ExecuteStoreProcedure("SP_GET_USUARIOS_CON_OFICIO", parametros);
 
             return dt;
         }
@@ -746,12 +773,30 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+        public DataTable GetComentariosOficiosUsuarioLog(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_GET_COMENTARIO_USUARIO_LOG", parametros);
+
+            return dt;
+        }
+
 
         public DataTable SetComentarioPublicacion(List<Parametro> parametros)
         {
             SQLServerDBHelper helper = new SQLServerDBHelper();
             DataTable dt = new DataTable();
             dt = helper.ExecuteStoreProcedure("SP_SET_COMENTARIOSPUBLICACION", parametros);
+
+            return dt;
+        }
+
+        public DataTable SetComentarioUsuarioOficios(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_COMENTARIOS_USUARIO_OFICIO", parametros);
 
             return dt;
         }
@@ -815,6 +860,15 @@ namespace ServicioEmpleosChile
             SQLServerDBHelper helper = new SQLServerDBHelper();
             DataTable dt = new DataTable();
             dt = helper.ExecuteStoreProcedure("SP_SET_MENSAJES", parametros);
+
+            return dt;
+        }
+
+        public DataTable SetMensajesAOtrosUsuarios(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_MENSAJES_OTROS_USUARIOS", parametros);
 
             return dt;
         }
@@ -990,6 +1044,15 @@ namespace ServicioEmpleosChile
             return dt;
         }
 
+
+        public DataTable SetValoracionOficio(List<Parametro> parametros)
+        {
+            SQLServerDBHelper helper = new SQLServerDBHelper();
+            DataTable dt = new DataTable();
+            dt = helper.ExecuteStoreProcedure("SP_SET_VALORACION_OFICIO", parametros);
+
+            return dt;
+        }
 
         public DataTable UpdADPreguntaEmpresa(List<Parametro> parametros)
         {
